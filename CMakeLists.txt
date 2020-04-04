@@ -176,3 +176,7 @@ if (LIBSERIAL_BUILD_DOCS)
     COMMENT "Generating API documentation with Doxygen" VERBATIM
     )
 endif()
+
+configure_file(libserial.pc.cmake.in libserial.pc @ONLY)
+install(FILES ${CMAKE_BINARY_DIR}/libserial.pc
+    DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
